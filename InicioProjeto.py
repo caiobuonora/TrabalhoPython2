@@ -53,7 +53,6 @@ print("Digite 5 para parar")
 while opc!=5:
     opc=int(input("Digite o que você quer fazer: "))
     
-
     if opc==1:
         print("Digite T para treino \nDigite C para competição")
         t_c=input("Quer registrar treino ou competição?: ")
@@ -64,7 +63,8 @@ while opc!=5:
         else:
             print("Opção inválida")
         add()
-    if opc==2:
+        
+    elif opc==2:
         vizu1()
         vizu2()
 
