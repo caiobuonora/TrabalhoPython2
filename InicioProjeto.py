@@ -29,7 +29,7 @@ def add():
                 localizacao = input(" Digite a localização do lugar: ")
                 condicoes_climaticas =input("Digite a condição climática (Neve, Chuva, Ensolarado ou Nublado): ")
                 for i in range(qt_rC):
-                    arquivotxt.write(f"{i+1}º/ª COMPETIÇÃO-> |Data: {data} |Distância: {distancia}km |Tempo de duração: {tempo}h |Localização: {localizacao} |Condição climática: {condicoes_climaticas}|")
+                    arquivotxt.write(f"{i+1}ª COMPETIÇÃO-> |Data: {data} |Distância: {distancia}km |Tempo de duração: {tempo}h |Localização: {localizacao} |Condição climática: {condicoes_climaticas}|")
                     i+=1
             except ValueError:
                 print("Alguma informação digitada é inválida")
