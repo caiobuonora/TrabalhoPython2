@@ -3,7 +3,8 @@ os.system("cls")
 
 opc=0
 cont=0
-qt_r=0
+qt_rT=0
+qt_rC=0
 
 def add():
     if t_c=="T":
@@ -14,8 +15,8 @@ def add():
                 tempo = float(input("Digite o tempo de duração (em Horas): "))
                 localizacao = input("Digite a localização do lugar: ")
                 condicoes_climaticas =input("Digite a condição climática (Neve, Chuva, Ensolarado ou Nublado): ")
-                for i in range(qt_r):
-                    arquivotxt.write(f"{i+1}ªTREINO->|Data: {data}|Distância: {distancia}|Tempo de duração: {tempo}|Localização: {localizacao}|Condição climática: {condicoes_climaticas}|")
+                for i in range(qt_rT):
+                    arquivotxt.write(f"{i+1}º TREINO->|Data: {data}|Distância: {distancia}km |Tempo de duração: {tempo}h|Localização: {localizacao}|Condição climática: {condicoes_climaticas}|")
                     i+=1
             except ValueError:
                 print("Alguma informação digitada é inválida")
@@ -27,14 +28,19 @@ def add():
                 tempo = float(input(" Digite o tempo de duração (em Horas): "))
                 localizacao = input(" Digite a localização do lugar: ")
                 condicoes_climaticas =input("Digite a condição climática (Neve, Chuva, Ensolarado ou Nublado): ")
-                for i in range(qt_r):
-                    arquivotxt.write(f"{i+1}ªCompetição \nData: {data} \nDistância: {distancia} \nTempo de duração: {tempo} \nLocalização: {localizacao} \nCondição climática: {condicoes_climaticas}")
+                for i in range(qt_rC):
+                    arquivotxt.write(f"{i+1}º COMPETIÇÃO-> |Data: {data} |Distância: {distancia}km |Tempo de duração: {tempo}h |Localização: {localizacao} |Condição climática: {condicoes_climaticas}|")
                     i+=1
-            except:
+            except ValueError:
                 print("Alguma informação digitada é inválida")
 
-def vizu():
+def vizu1():
     with open('treinos.txt','r') as arquivotxt:
+        for i in arquivotxt:
+            print(i)
+
+def vizu2():
+    with open('competicoes.txt','r') as arquivotxt:
         for i in arquivotxt:
             print(i)
 
@@ -46,13 +52,20 @@ print("Digite 5 para parar")
 
 while opc!=5:
     opc=int(input("Digite o que você quer fazer: "))
-    qt_r+=1
+    
 
     if opc==1:
         print("Digite T para treino \nDigite C para competição")
         t_c=input("Quer registrar treino ou competição?: ")
+        if t_c=="T":
+            qt_rT+=1
+        elif t_c=="C":
+            qt_rC+=1
+        else:
+            print("Opção inválida")
         add()
     if opc==2:
-        vizu()
+        vizu1()
+        vizu2()
 
     
