@@ -44,6 +44,15 @@ def vizu2():
         for i in arquivotxt:
             print(i)
 
+def atualizar_progresso(km_corrido, meta_anual, total_corrido):
+    total_corrido += km_corrido
+    km_restante = meta_anual - total_corrido
+    if km_restante > 0:
+        print(f"Faltam {km_restante} km para cumprir a meta anual.")
+    else:
+        print(f"Parabéns, Pedro! Você já atingiu a meta anual com {total_corrido} km percorridos.")
+    return total_corrido
+
 print("Digite 1 para fazer um registro")
 print("Digite 2 para visualizar os registros")
 print("Digite 3 para atualizar os registros")
@@ -67,5 +76,7 @@ while opc!=5:
     elif opc==2:
         vizu1()
         vizu2()
+
+
 
     
