@@ -52,6 +52,9 @@ print("Digite 5 para adicionar as Metas e Desafios")
 print("Digite 6 para atualizar as Metas e Desafios")
 print("Digite 7 para acabar")
 
+print("x")
+
+
 
 
 while opc!=7:
