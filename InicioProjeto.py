@@ -50,7 +50,7 @@ print("Digite 3 para atualizar os registros")
 print("Digite 4 para excluir um registro")
 print("Digite 5 para adicionar as Metas e Desafios")
 print("Digite 6 para atualizar as Metas e Desafios")
-print("Digite 7 para parar")
+print("Digite 7 para acabar")
 
 
 
