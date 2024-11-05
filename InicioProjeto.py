@@ -48,9 +48,13 @@ print("Digite 1 para fazer um registro")
 print("Digite 2 para visualizar os registros")
 print("Digite 3 para atualizar os registros")
 print("Digite 4 para excluir um registro")
-print("Digite 5 para parar")
+print("Digite 5 para adicionar as Metas e Desafios")
+print("Digite 6 para atualizar as Metas e Desafios")
+print("Digite 7 para parar")
 
-while opc!=5:
+
+
+while opc!=7:
     opc=int(input("Digite o que você quer fazer: "))
     
     if opc==1:
